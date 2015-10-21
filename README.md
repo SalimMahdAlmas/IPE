@@ -19,6 +19,9 @@ print(hel_world)
 @import = same like import java.lang >> but it can support like this too @import Integer
 as = denoted to assign variable 
 
+#Notice
+This source get update in a day but download jar is not updated. Jar is updated after 7 days
+
 #Author 
 
 Sahid <AndroidFire> Almas

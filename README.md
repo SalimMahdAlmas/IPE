@@ -22,6 +22,9 @@ as = denoted to assign variable
 #Notice
 This source get update in a day but download jar is not updated. Jar is updated after 7 days
 
+#Is Cross Platform ?
+No,Currently its support only with Linux
+
 #Author 
 
 Sahid <AndroidFire> Almas

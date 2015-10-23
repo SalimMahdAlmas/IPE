@@ -7,22 +7,7 @@ public class Structure {
     }
     private void impl(String className) {
 
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(" //`2`535234`1`2 \n");
-        stringBuilder.append("public class ");
-        stringBuilder.append(className);
-        stringBuilder.append(" { \n");
-        stringBuilder.append(" //`2`6348351242`2");
-        stringBuilder.append("\n");
-        stringBuilder.append("public static void main(String[] args) " + " throws Exception");
-        stringBuilder.append("{ \n");
-        stringBuilder.append(" //`2`6348352`2");
-        stringBuilder.append("\n");
-        stringBuilder.append("\n");
-        stringBuilder.append("} \n");
-        stringBuilder.append("}");
-
-        Result = stringBuilder.toString();
+        Result = " //`2`535234`1`2 \n" + "public class " + className + " { \n" + " //`2`6348351242`2" + "\n" + "public static void main(String[] args) " + " throws Exception" + "{ \n" + " //`2`6348352`2" + "\n" + "\n" + "} \n" + "}";
 
     }
 }

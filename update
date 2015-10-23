@@ -1,7 +1,7 @@
 #! /usr/bin/python2.7
 # @author Sahid <AndroidFire> Almas
 import os
-
+import sys
 
 "A script to grab the update file from the origin to the source path of git "
 
@@ -65,6 +65,15 @@ while True:
 
     print("Processing :::")
     copytree(IDEA_SOURCE_PATH,GIT_SOURCE_PATH)
+
+    commit_nam = sys.argv[1]
+
+    print(os.system("git init"))
+    print(os.system("git add ."))
+    print(os.system("git commit -m "+commit_nam))
+    print(os.system("git push https://github.com/AndroidFire/IPE.git master"))
+
     break
+
 
 

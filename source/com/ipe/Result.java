@@ -5,9 +5,9 @@ import javax.swing.text.*;
 import java.awt.*;
 
 public class Result {
-    public static String message = "public class JTextPaneStyle" +
-            "public static void main(String args[]) {" +
-            "JFrame frame = new JFrame();";
+    public static String message = "";
+
+    private static boolean shouldEditable = false;
 
     public static void main(String args[]) {
 
@@ -31,6 +31,10 @@ public class Result {
         }
 
         JTextPane textPane = new JTextPane(document);
+
+        if (shouldEditable) {
+            textPane.setEditable(true);
+        }
         textPane.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(textPane);
         frame.add(scrollPane, BorderLayout.CENTER);

@@ -23,7 +23,7 @@ as = denoted to assign variable
 This source get update in a day but download jar is not updated. Jar is updated after 7 days
 
 #Is Cross Platform ?
-No,Currently its support only with Linux
+Yes,But not in beta 
 
 #Author 
 

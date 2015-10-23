@@ -1,6 +1,7 @@
 package com.ipe.impl;
 
 import com.ipe.util.Command;
+import com.ipe.util.SystemInfo;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -102,13 +103,23 @@ public class Zygote {
             e.printStackTrace();
         }
         try {
+
+
             write(class_Period,class_Name+".java");
 
-            write("#!/usr/bin/env sh \n javac " + class_Name + ".java \n" + "java " + class_Name, "run.sh");
+            if (SystemInfo.getOS_ID() == SystemInfo.LINUX_OS) {
+                write("#!/usr/bin/env sh \n javac " + class_Name + ".java \n" + "java " + class_Name, "run.sh");
 
 
-            System.out.println(Command.commandIt("chmod +x run.sh"));
-           Result =  (Command.commandIt("./run.sh"));
+                System.out.println(Command.commandIt("chmod +x run.sh"));
+                Result = (Command.commandIt("./run.sh"));
+            }else if (SystemInfo.getOS_ID() == SystemInfo.UNSUPPORTED_OS) {
+
+                Command.commandIt("javac "+class_Name+".java");
+                Result  = (Command.commandIt("java" + class_Name));
+
+
+            }
 
 
 

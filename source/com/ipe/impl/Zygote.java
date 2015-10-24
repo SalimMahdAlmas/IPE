@@ -9,8 +9,6 @@ import java.util.ArrayList;
 public class Zygote {
     public static String content;
     public String Class_Name;
-    public String LAST_RESULT = null;
-    private boolean sShouldRunInput = false;
     public static String Result;
 
     public Zygote(String file) {
@@ -135,7 +133,7 @@ public class Zygote {
     private   void readFile(File file){
 
         BufferedReader bufferedReader = null;
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuilder stringBuffer = new StringBuilder();
         String curr;
 
         try {

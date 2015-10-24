@@ -18,8 +18,7 @@ public class SimpleEditor extends JFrame {
 
     private Action run = new Run();
     private JTextComponent textComp;
-
-    private Hashtable actionHash = new Hashtable();
+    
 
     public static void main(String[] args) {
         SimpleEditor editor = new SimpleEditor();
@@ -33,6 +32,8 @@ public class SimpleEditor extends JFrame {
         super("IPE ");
         textComp = createTextComponent();
         makeActionsPretty();
+
+
 
         Container content = getContentPane();
         content.add(textComp, BorderLayout.CENTER);

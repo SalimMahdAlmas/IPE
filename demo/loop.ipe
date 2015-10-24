@@ -1,1 +1,0 @@
-new ForLoop("for i = 0 to 5 : \n { print(Hello) }");

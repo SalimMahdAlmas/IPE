@@ -1,0 +1,8 @@
+#! /usr/bin/python
+import os
+
+os.system("chmod +x *")
+os.system("cp ipe /usr/local/bin/")
+os.system("cp IPESys.jar /usr/local/bin/")
+
+print("Done")

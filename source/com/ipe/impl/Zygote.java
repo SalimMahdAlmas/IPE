@@ -188,6 +188,7 @@ public class Zygote {
             new File(zygote.Class_Name+".java").delete();
             new File(zygote.Class_Name+".class").delete();
             new File("run.sh").delete();
+            new File("ps.sh").delete();
 
         }
 

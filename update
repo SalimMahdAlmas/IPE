@@ -69,7 +69,6 @@ while True:
     os.system("cd "+GIT_SOURCE_PATH)
     os.system("rm -rf com")
     copytree(IDEA_SOURCE_PATH,GIT_SOURCE_PATH)
-
     commit_nam = sys.argv[1]
 
     print(os.system("git init"))

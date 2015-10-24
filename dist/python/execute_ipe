@@ -1,0 +1,10 @@
+#! /usr/bin/python2.7
+import os
+import sys
+
+__author__ = 'sahid'
+
+FILE = sys.argv[1]
+
+os.system("javac "+FILE+".java")
+os.system("java "+FILE)

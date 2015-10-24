@@ -12,8 +12,8 @@ public class Result {
     public static void main(String args[]) {
 
 
-        JFrame frame = new JFrame("Result");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame frame = new JFrame("Console:");
+
 
         StyleContext context = new StyleContext();
         StyledDocument document = new DefaultStyledDocument(context);
@@ -29,6 +29,7 @@ public class Result {
         } catch (BadLocationException badLocationException) {
             System.err.println("Oops");
         }
+
 
         JTextPane textPane = new JTextPane(document);
 

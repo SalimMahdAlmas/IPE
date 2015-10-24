@@ -1,5 +1,5 @@
 # IPE
-A Programming Language based on Java
+IPE is programming language written in java , python and C & C++
 
 # Why this Programming Language
 

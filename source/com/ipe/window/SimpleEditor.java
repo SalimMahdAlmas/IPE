@@ -18,7 +18,7 @@ public class SimpleEditor extends JFrame {
 
     private Action run = new Run();
     private JTextComponent textComp;
-    
+
 
     public static void main(String[] args) {
         SimpleEditor editor = new SimpleEditor();
@@ -53,15 +53,12 @@ public class SimpleEditor extends JFrame {
     protected void makeActionsPretty() {
         Action a;
         a = textComp.getActionMap().get(DefaultEditorKit.cutAction);
-        a.putValue(Action.SMALL_ICON, new ImageIcon("cut.gif"));
         a.putValue(Action.NAME, "Cut");
 
         a = textComp.getActionMap().get(DefaultEditorKit.copyAction);
-        a.putValue(Action.SMALL_ICON, new ImageIcon("copy.gif"));
         a.putValue(Action.NAME, "Copy");
 
         a = textComp.getActionMap().get(DefaultEditorKit.pasteAction);
-        a.putValue(Action.SMALL_ICON, new ImageIcon("paste.gif"));
         a.putValue(Action.NAME, "Paste");
 
         a = textComp.getActionMap().get(DefaultEditorKit.selectAllAction);

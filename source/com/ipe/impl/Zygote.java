@@ -61,9 +61,11 @@ public class Zygote {
 
                 imports.add(importS.getFinalImport());
 
-            }else {
-                if (!a.contains(""))
-                un_Tas.add(a);
+            }
+            else {
+                if (!a.contains("")) {
+                    un_Tas.add(a);
+                }
             }
 
         }

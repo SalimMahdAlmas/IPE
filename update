@@ -9,6 +9,7 @@ import sys
 GIT_SOURCE_PATH = "/home/sahid/IPE/source"
 IDEA_SOURCE_PATH = "/home/sahid/IdeaProjects/IPE/src"
 
+
 class CTError(Exception):
     def __init__(self, errors):
         self.errors = errors
@@ -62,8 +63,12 @@ def copytree(src, dst, symlinks=False, ignore=[]):
         raise CTError(errors)
 
 while True:
+    print("            ~~~")
+    print("Processing |:::|")
+    print("            ~~~")
 
-    print("Processing :::")
+    os.system("cd "+GIT_SOURCE_PATH)
+    os.system("rm -rf com")
     copytree(IDEA_SOURCE_PATH,GIT_SOURCE_PATH)
 
     commit_nam = sys.argv[1]
@@ -72,6 +77,7 @@ while True:
     print(os.system("git add ."))
     print(os.system("git commit -m "+commit_nam))
     print(os.system("git push https://github.com/AndroidFire/IPE.git master"))
+
 
     break
 

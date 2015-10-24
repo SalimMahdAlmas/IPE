@@ -25,6 +25,19 @@ This source get update in a day but download jar is not updated. Jar is updated 
 #Is Cross Platform ?
 Yes,But not in beta 
 
+#How to Use
+
+Linux:: Clone this repo 
+Open Terminal 
+cd to dist folder of clone repo
+then type chmod +x ./ipe_linux
+then type ./ipe_linux you are done
+
+Windows:: Dobule click on the jar or double click on the ipe_windows.bat 
+
+
+
+
 #Author 
 
 Sahid <AndroidFire> Almas

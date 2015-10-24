@@ -111,14 +111,13 @@ public class Zygote {
 
                 System.out.println(Command.commandIt("chmod +x run.sh"));
                 Result = (Command.commandIt("./run.sh"));
-            }else if (SystemInfo.getOS_ID() == SystemInfo.UNSUPPORTED_OS) {
+            }else if (SystemInfo.getOS_ID() == SystemInfo.SUPPORTED_OS) {
 
                 Command.commandIt("javac "+class_Name+".java");
                 Result  = (Command.commandIt("java" + class_Name));
 
 
             }
-
 
 
 

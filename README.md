@@ -22,6 +22,10 @@ as = denoted to assign variable
 #Notice
 This source get update in a day but download jar is not updated. Jar is updated after 7 days
 
+#Requirtment
+Java
+Python
+
 #Is Cross Platform ?
 Yes,But not in beta 
 
@@ -34,7 +38,14 @@ then type chmod +x ./ipe_linux
 then type ./ipe_linux you are done
 
 Windows:: Dobule click on the jar or double click on the ipe_windows.bat 
+Or:
+Linux:
+Open terminal cd to dist/system/linux
+type chmod +x
+type ./install_ipe
+you are done
 
+Now you can all ipe -e [Path_to_ipe_file]
 
 
 

@@ -102,23 +102,31 @@ public class Zygote {
         }
         try {
 
+            write(class_Period, class_Name + ".java");
 
-            write(class_Period,class_Name+".java");
-
-            if (SystemInfo.getOS_ID() == SystemInfo.LINUX_OS) {
-                write("#!/usr/bin/env sh \n javac " + class_Name + ".java \n" + "java " + class_Name, "run.sh");
+            if (!SystemInfo.Is_Python_Usable()) {
 
 
-                System.out.println(Command.commandIt("chmod +x run.sh"));
-                Result = (Command.commandIt("./run.sh"));
-            }else if (SystemInfo.getOS_ID() == SystemInfo.SUPPORTED_OS) {
+                if (SystemInfo.getOS_ID() == SystemInfo.LINUX_OS) {
+                    write("#!/usr/bin/env sh \n javac " + class_Name + ".java \n" + "java " + class_Name, "run.sh");
 
-                Command.commandIt("javac "+class_Name+".java");
-                Result  = (Command.commandIt("java" + class_Name));
 
+                    System.out.println(Command.commandIt("chmod +x run.sh"));
+                    Result = (Command.commandIt("./run.sh"));
+                } else if (SystemInfo.getOS_ID() == SystemInfo.SUPPORTED_OS) {
+
+                    Command.commandIt("javac " + class_Name + ".java");
+                    Result = (Command.commandIt("java" + class_Name));
+
+
+                }
+            }else {
+
+
+                Command.commandIt("chmod +x ./python/execute_ipe ");
+                Result =    Command.commandIt("./python/execute_ipe "+class_Name);
 
             }
-
 
 
         } catch (IOException e) {

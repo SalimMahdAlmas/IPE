@@ -41,3 +41,9 @@ Windows:: Dobule click on the jar or double click on the ipe_windows.bat
 #Author 
 
 Sahid <AndroidFire> Almas
+
+#Credits
+
+Apktool
+Java
+Python

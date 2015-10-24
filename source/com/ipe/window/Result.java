@@ -39,7 +39,7 @@ public class Result {
         JScrollPane scrollPane = new JScrollPane(textPane);
         frame.add(scrollPane, BorderLayout.CENTER);
 
-        frame.setSize(300, 150);
+        frame.setSize(500, 200);
         frame.setVisible(true);
     }
 }

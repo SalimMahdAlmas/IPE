@@ -1,5 +1,6 @@
 package com.ipe.window;
 
+import com.ipe.Config;
 import com.ipe.impl.Zygote;
 
 import javax.swing.*;
@@ -8,14 +9,13 @@ import javax.swing.text.JTextComponent;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.*;
-import java.util.Hashtable;
 
 public class SimpleEditor extends JFrame {
 
     private Action openAction = new OpenAction();
 
     private Action saveAction = new SaveActions();
-
+    private Action aboutAction = new AboutAction();
     private Action run = new Run();
     private JTextComponent textComp;
 
@@ -76,9 +76,11 @@ public class SimpleEditor extends JFrame {
         menubar.add(file);
         menubar.add(edit);
 
+        file.add(getRun());
         file.add(getOpenAction());
         file.add(getSaveAction());
-        file.add(getRun());
+        file.add(aboutAction);
+
         file.add(new ExitAction());
         edit.add(textComp.getActionMap().get(DefaultEditorKit.cutAction));
         edit.add(textComp.getActionMap().get(DefaultEditorKit.copyAction));
@@ -100,9 +102,6 @@ public class SimpleEditor extends JFrame {
         return run;
     }
 
-    protected JTextComponent getTextComponent() {
-        return textComp;
-    }
 
     // ********** ACTION INNER CLASSES ********** //
 
@@ -146,6 +145,7 @@ public class SimpleEditor extends JFrame {
                     try {
                         reader.close();
                     } catch (IOException x) {
+                        x.printStackTrace();
                     }
                 }
             }
@@ -226,6 +226,7 @@ public class SimpleEditor extends JFrame {
                     try {
                         writer.close();
                     } catch (IOException x) {
+                        x.printStackTrace();
                     }
                 }
             }
@@ -244,5 +245,17 @@ public class SimpleEditor extends JFrame {
         bufferedWriter.write(contentX);
         bufferedWriter.close();
     }
+
+
+        public class AboutAction extends AbstractAction {
+            public AboutAction() {
+                super("About");
+            }
+
+            public void actionPerformed(ActionEvent ev) {
+                JOptionPane.showMessageDialog(textComp,"IPE "+ Config.VERSION+"\n By AndroidFire","About",JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+
 }
            

@@ -28,10 +28,6 @@ public class ComApp {
     private static final ArrayList<CommandApp> mCommands  = new ArrayList<>();
     private static String mArgsCommand = "";
     private static String mStuffArgs = "";
-    private static String USAGE = " IPE \n" +
-            " Usage :" +
-            " ComApp -e [file path] \n" +
-            " ComApp -about \n";
 
     public static void main(String[] args) {
 
@@ -72,8 +68,13 @@ public class ComApp {
             }
 
         }
-        if (!mArgsCommand.equals(null)) {
+        if (!mArgsCommand.equals("")) {
             while (CURSOR == mCommands.size()) {
+                String USAGE = " IPE \n" +
+                        " Usage :" +
+                        " ComApp -e [file path] (to execute a ipe) \n" +
+                        " ComApp -about (about)\n" +
+                        "";
                 System.out.println(USAGE);
                 CURSOR--;
             }
@@ -87,19 +88,6 @@ public class ComApp {
 
 
 
-    public static class About extends CommandApp {
 
-        protected About(String func_name, String args) {
-
-            super(func_name, args);
-        }
-
-        @Override
-        public void function(String argument) {
-
-            System.out.println(" IPE By Sahid <AndroidFire> Almas");
-        }
-
-    }
 
 }

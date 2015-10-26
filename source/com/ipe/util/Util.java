@@ -7,7 +7,6 @@ public class Util {
     public static String encodeCodec(String a) {
 
 
-        String ab = a;
         byte[] bytes = a.getBytes();
         String bs = (Util.encodeCodec(bytes));
 
@@ -32,7 +31,7 @@ public class Util {
         for (int i = 0 ; i < bs.split("").length ; i++) {
             if (i < 15)  {
 
-                stringBuilder.append(bs.split("")[i]+abcd[i]);
+                stringBuilder.append(bs.split("")[i]).append(abcd[i]);
             }
             else {
                 break;

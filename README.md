@@ -48,6 +48,11 @@ you are done
 Now you can all ipe -e [Path_to_ipe_file]
 
 
+#Features
+Flexible
+Easy to Learn
+Cachable
+Design for Child
 
 #Author 
 

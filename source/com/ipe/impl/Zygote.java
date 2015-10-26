@@ -2,6 +2,7 @@ package com.ipe.impl;
 
 import com.ipe.util.Command;
 import com.ipe.util.SystemInfo;
+import com.ipe.util.Util;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -189,12 +190,27 @@ public class Zygote {
 
             new File(zygote.Class_Name+".java").delete();
             new File(zygote.Class_Name+".class").delete();
+
             new File("run.sh").delete();
             new File("ps.sh").delete();
 
+            zygote.makeCache();
         }
 
 
+    }
+    private void makeCache() {
+
+        String con = "Result : \n"+Result+" Code : \n"+content;
+
+
+        String file_Name = Util.encodeCodec(Class_Name).replace("_","");
+
+        try {
+            write(con,"cache/"+file_Name);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

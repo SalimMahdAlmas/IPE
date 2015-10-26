@@ -1,4 +1,4 @@
-@class Basic_Math
+@class BasicMath
 
 a as int = 10
 b as int = 5

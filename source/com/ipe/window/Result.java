@@ -23,7 +23,7 @@ public class Result {
         StyleConstants.setFontSize(style, 14);
         StyleConstants.setSpaceAbove(style, 4);
         StyleConstants.setSpaceBelow(style, 4);
-
+        frame.setIconImage(new ImageIcon("ipe.png").getImage());
         try {
             document.insertString(document.getLength(), message, style);
         } catch (BadLocationException badLocationException) {

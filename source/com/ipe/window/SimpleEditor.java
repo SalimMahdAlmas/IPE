@@ -34,6 +34,7 @@ public class SimpleEditor extends JFrame {
         makeActionsPretty();
 
 
+        setIconImage(new ImageIcon("ipe.png").getImage());
 
         Container content = getContentPane();
         content.add(textComp, BorderLayout.CENTER);

@@ -15,14 +15,3 @@ print(c)
 print(d)
 print(e)
 print(f)
-
-
-Output:
-
-15
-5
-2
-50
-
-
-Process finished with exit code 0

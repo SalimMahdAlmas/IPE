@@ -6,6 +6,7 @@ public class Util {
 
     public static String encodeCodec(String a) {
 
+        a = a.toLowerCase();
 
         byte[] bytes = a.getBytes();
         String bs = (Util.encodeCodec(bytes));
